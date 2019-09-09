@@ -1,6 +1,4 @@
 module MovieGem
-
-
-    class Movie
+    class CLI
     end
 end

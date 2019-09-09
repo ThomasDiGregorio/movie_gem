@@ -2,7 +2,8 @@ require 'nokogiri'
 require 'open-uri'
 require 'pry'
 
-
-class MovieGem::Scraper
+module MovieGem
+    class Scraper
+    end
 
 end
