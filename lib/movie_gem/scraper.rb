@@ -7,7 +7,7 @@ module MovieGem
         def self.get_site  
             html = open("https://editorial.rottentomatoes.com/guide/best-sci-fi-movies-of-all-time/4/")
             doc = Nokogiri::HTML(html)
-            doc.css("div.row.countdown-item").each do |card|
+            doc.css(".row_countdown-item").each do |card|
             binding.pry
             end
         end
