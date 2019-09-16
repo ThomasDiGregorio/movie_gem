@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Flatiron Cli Movie}
   spec.description   = %q{}
-  spec.homepage      = "git@github.com:ThomasDiGregorio/movie_gem.git"
+  spec.homepage      = "https://github.com/ThomasDiGregorio/movie_gem.git"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -20,8 +20,8 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "git@github.com:ThomasDiGregorio/movie_gem.git"
-    spec.metadata["changelog_uri"] = "git@github.com:ThomasDiGregorio/movie_gem.git"
+    spec.metadata["source_code_uri"] = "https://github.com/ThomasDiGregorio/movie_gem.git"
+    spec.metadata["changelog_uri"] = "https://github.com/ThomasDiGregorio/movie_gem.git"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
@@ -38,4 +38,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "pry"
+  spec.add_dependency "nokogiri"
 end
