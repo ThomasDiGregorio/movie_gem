@@ -15,7 +15,11 @@ module MovieGem
         def self.all
             @@all
         end
-        def 
+        def self.create_from_collection(movies_array)
+            movies_array.each do |movie_hash|
+                Movie.new(movie_hash)
+            end
+        end
         MovieGem::Scraper.scrape_movies
 
     end
