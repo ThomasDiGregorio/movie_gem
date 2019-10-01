@@ -7,6 +7,7 @@ module MovieGem
     class CLI
         def start
             puts "Welcome to MovieGem"
+            Movie.load
             menu
             #binding.p
             input = nil
@@ -15,7 +16,7 @@ module MovieGem
                 if @input == "menu"
                     menu
                 elsif @input == "1"
-                    display_movies
+                    movie_list
                     puts "display's a list of movies"
                 elsif @input == "2"
                     display_synopsis
@@ -25,19 +26,18 @@ module MovieGem
             puts "Thanks for checking out our MovieGem"
         end
         def menu
-            MovieGem::Scraper.scrape_movies
+            puts "Please select from the following options"
+            puts "1, Display a list of movies"
+            puts "2, Display all synopses"
+            puts "To see this list at anytime type 'menu'"
         end
         def movie_list
           @object = Movie.all.sample(25)
           @object.each.with_index(1) do |movie, i|
              puts "#{i}. #{movie.title}"
           end
-          list(@object)
-       end
-       def display_movies
-        @@all = []
-        @@all = display.all.movies
-       end
+        
+        end
 
        def display_synopsis
         @@all = display.all.synopsis

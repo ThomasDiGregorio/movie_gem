@@ -6,7 +6,7 @@
 require_relative "./movie_gem/version"
 require_relative './movie_gem/scraper'
 require_relative "./movie_gem/CLI"
-
+require_relative "./movie_gem/movie"
 #module MovieGem
   #class Error < StandardError; end
   # Your code goes here...
