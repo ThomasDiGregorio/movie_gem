@@ -39,11 +39,24 @@ module MovieGem
         
         end
 
-       def display_synopsis
-        @@all = display.all.synopsis
-       end
+        def display_synopsis
+            @object = Movie.all.sample(25)
+            @object.each.with_index(1) do |movie, i|
+                puts "#{i}. #{movie.synopsis}"
+            end
+        end
+        def prompt_for_movie_choice
+            puts "Which movie would you like more info about?"
+            @input = gets.chomp
+            index = @input.to_i-1
+            if index >= 0
+                puts Movie.all[@input.to_i-1].synopsis
+            end
+        end
+    end
+end 
     
  
-    end
+    
  
- end
+ 

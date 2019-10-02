@@ -5,15 +5,12 @@ module MovieGem
     class Movie
         attr_accessor :title, :synopsis
 
-        @@all = []
-
-        def initialize(title, synopsis)
-            @title = title
-            @synopsis = synopsis 
-            @@all << self
+        def initialize(attributes = {})
+            @title = attributes[:title]
+            @synopsis = attributes[:synopsis] 
         end
         def self.all
-            @@all
+            @@all ||= self.load 
         end
         def self.create_from_collection(movies_array)
             movies_array.collect do |movie_hash|
