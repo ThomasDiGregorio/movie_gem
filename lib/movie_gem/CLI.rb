@@ -51,10 +51,24 @@ module MovieGem
             index = @input.to_i-1
             if index >= 0
                 puts Movie.all[@input.to_i-1].synopsis
+        #     end
+        #     #next_action
+        # end
+        # def next_action
+        #         puts "If you would like to see another Movie type M"
+        #         puts "If you would like to exit type E"
+        #         input = gets.strip.upcase
+        #         if input == "M"
+        #             start
+        #         elsif input == "E"
+        #         puts "Thanks for checking out our MovieGem"
+        #         else
+        #             puts "Sorry I didn't understand"
+        #             next_action   
             end
         end
     end
-end 
+end    
     
  
     
