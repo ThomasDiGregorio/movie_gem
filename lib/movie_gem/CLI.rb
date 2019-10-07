@@ -1,6 +1,3 @@
-#display data, menus, and control flow here.
-#This class should also receive input to show data requested.
-
 require 'pry'
 
 module MovieGem
@@ -11,7 +8,7 @@ module MovieGem
             menu
             #binding.p
             input = nil
-            while @input != "exit" && @input != "quit"
+            while @input != "exit"
                 @input = gets.chomp
                 if @input == "menu"
                     menu
@@ -45,29 +42,17 @@ module MovieGem
             @object.each.with_index(1) do |movie, i|
                 puts "#{i}. #{movie.synopsis}"
             end
+        
         end
         def prompt_for_movie_choice
             puts "Which movie would you like more info about?"
             @input = gets.chomp
             index = @input.to_i-1
-            binding.pry
+            #binding.pry
             if index >= 0
                 puts Movie.all[@input.to_i-1].synopsis
-        #     end
-        #     #next_action
-        # end
-        # def next_action
-        #         puts "If you would like to see another Movie type M"
-        #         puts "If you would like to exit type E"
-        #         input = gets.strip.upcase
-        #         if input == "M"
-        #             start
-        #         elsif input == "E"
-        #         puts "Thanks for checking out our MovieGem"
-        #         else
-        #             puts "Sorry I didn't understand"
-        #             next_action   
             end
+            menu  
         end
     end
 end    

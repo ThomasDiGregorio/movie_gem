@@ -1,4 +1,3 @@
-#Munipulate scraper data from this class
 #binding.pry
 
 module MovieGem
