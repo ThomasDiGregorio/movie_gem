@@ -22,7 +22,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In order to start the CLI run the following command:
+
+  $ sci-fi  
 
 ## Development
 

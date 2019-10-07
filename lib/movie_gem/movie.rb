@@ -1,5 +1,3 @@
-#binding.pry
-
 module MovieGem
     class Movie
         attr_accessor :title, :synopsis

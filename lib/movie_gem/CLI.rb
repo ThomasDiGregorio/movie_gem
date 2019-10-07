@@ -6,7 +6,6 @@ module MovieGem
             puts "Welcome to MovieGem"
             Movie.load
             menu
-            #binding.p
             input = nil
             while @input != "exit"
                 @input = gets.chomp
@@ -46,9 +45,9 @@ module MovieGem
         end
         def prompt_for_movie_choice
             puts "Which movie would you like more info about?"
+            puts "Pick a number"
             @input = gets.chomp
             index = @input.to_i-1
-            #binding.pry
             if index >= 0
                 puts Movie.all[@input.to_i-1].synopsis
             end
