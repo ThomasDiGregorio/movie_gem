@@ -32,7 +32,7 @@ module MovieGem
             puts "To see this list at anytime type 'menu'"
         end
         def movie_list
-          @object = Movie.all.sample(25)
+          @object = Movie.all
           @object.each.with_index(1) do |movie, i|
              puts "#{i}. #{movie.title}"
           end
