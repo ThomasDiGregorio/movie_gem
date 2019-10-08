@@ -4,17 +4,6 @@ This gem basically what it does is display the top 25 sci-fi movies and synopses
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'movie_gem'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install movie_gem
 
