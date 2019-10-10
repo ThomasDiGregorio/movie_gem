@@ -18,5 +18,10 @@ module MovieGem
             create_from_collection(MovieGem::Scraper.scrape_movies)
         end
 
+        def self.find_by_word(word)
+            @@all = .each do |movie|
+                movie.title = word
+        end 
+
     end
 end
