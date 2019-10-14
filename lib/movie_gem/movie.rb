@@ -19,8 +19,9 @@ module MovieGem
         end
 
         def self.find_by_word(word)
-            @@all = .each do |movie|
-                movie.title = word
+            @@all.find do |movie| 
+                movie.title.include?(word)
+            end
         end 
 
     end

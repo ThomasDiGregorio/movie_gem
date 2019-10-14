@@ -5,6 +5,7 @@ module MovieGem
         def start
             puts "Welcome to MovieGem"
             Movie.load
+            binding.pry
             menu
             input = nil
             while @input != "exit"
