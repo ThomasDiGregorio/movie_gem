@@ -19,7 +19,7 @@ module MovieGem
         end
 
         def self.find_by_word(word)
-            @@all.find do |movie| 
+            all.find do |movie| 
                 movie.title.include?(word)
             end
         end 

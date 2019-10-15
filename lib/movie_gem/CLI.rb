@@ -5,7 +5,6 @@ module MovieGem
         def start
             puts "Welcome to MovieGem"
             Movie.load
-            binding.pry
             menu
             input = nil
             while @input != "exit"
@@ -18,6 +17,10 @@ module MovieGem
                 elsif @input == "2"
                     display_synopsis
                     puts "display_synopsis"
+                elsif @input == "3"
+                    binding.pry
+                    Movie.title.include?(word)
+                    puts "title search"    
                 end
             end
             puts "Thanks for checking out our MovieGem"
@@ -26,6 +29,7 @@ module MovieGem
             puts "Please select from the following options"
             puts "1, Display a list of movies"
             puts "2, Display all synopses"
+            puts "3, find title by word"
             puts "To see this list at anytime type 'menu'"
         end
         def movie_list
